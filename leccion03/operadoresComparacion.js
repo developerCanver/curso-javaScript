@@ -32,3 +32,20 @@ if (a >= valMin && a <= valMax) {
 } else {
   console.log("Fuera del rango");
 }
+
+
+
+let vacaciones = false, diaDescanso = false;
+if ( vacaciones || diaDescanso) {
+  console.log("falso");
+} else {
+  console.log("falso");
+}
+
+
+let res = (3>2) ? 'Verdadero' : 'Falso';
+console.log(res);
+
+let numero = 9;
+res = (numero % 2 ==0) ? "Numero par " : " Numero Impar";
+console.log(res)
