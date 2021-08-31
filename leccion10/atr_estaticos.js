@@ -1,10 +1,12 @@
 //clase padre Persona
 
 class Persona{
+    static contadorPersona =0;
     constructor(nombre,apellido){
         //this.apellido nombre del atributo
             this._nombre=nombre;
             this._apellido=apellido;
+            this.idPersona=Persona.contadorPersona++;
 
     }
 
@@ -28,14 +30,10 @@ class Persona{
              this._apellido = apellido;
         }
         nombreCompleeto(){
-            return this._nombre+ ' '+this._apellido;
+            return this._nombre+ ' '+this._apellido+ ' '+this.idPersona;
         }
         //sobrescribiendo el metodo de la clase ´padre polismorfismo (multiples formas en tiemoi de ejecucion)
-        
-        toString(){
-            return this.nombreCompleeto();
 
-        }
 }
 
 class Empleado extends Persona{
@@ -63,6 +61,7 @@ class Empleado extends Persona{
 }
 //cre<r obketo
 let persona1 = new Persona('Juan', 'Perez');
+let persona2 = new Persona('Marlosn', 'Ordoñez');
 
 console.log(persona1)
 
@@ -75,8 +74,5 @@ console.log(empleado1)
 console.log(empleado1.nombreCompleeto())
 
 console.log(empleado1.toString())
-
-
-
 
 
